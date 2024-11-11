@@ -34,7 +34,7 @@ public class Game {
     private User owner;
     @Column
     private Integer followerAmount;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "game_tags",
             joinColumns = @JoinColumn(name = "game_id"),
